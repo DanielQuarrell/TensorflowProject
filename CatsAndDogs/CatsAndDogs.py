@@ -23,7 +23,7 @@ classifier.add(Dense(output_dim=1, activation='sigmoid'))
 # Compiling the CNN
 classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Part 2 - Fitting the CNN to the images
+# Part 5 - Fitting the CNN to the images
 from keras.preprocessing.image import ImageDataGenerator
 
 train_datagen = ImageDataGenerator(
@@ -61,11 +61,18 @@ classifier.fit_generator(
     validation_steps=800
 )
 
+# Part 7 - Save the model
+classifier.save("64x3-CNN.model")
+
 import numpy as np
+import tensorflow
 from keras.preprocessing import image
+
 test_image = image.load_img('mycat.jpg', target_size=(64, 64))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis=0)
+
+classifier = tensorflow.keras.models.load_model("64x3-CNN.model")
 result = classifier.predict(test_image)
 training_set.class_indices
 if result[0][0] >= 0.5:
