@@ -7,11 +7,11 @@ from PIL import Image
 from PIL import ImageFile
 
 app_key = "JNW2RQKQlGBuYLpfDzfLillpPBaVbkYR"
-width = 500
-height = 500
+width = 1500
+height = 1500
 zoom = 17
-longitude = 51.511375
-latitude = -2.543449
+longitude = 52.268156
+latitude = -1.527460
 image_type = "png"
 
 image_number = int(time.time())
@@ -39,7 +39,7 @@ cropped_img = img.crop(area)
 cropped_img.save(f"TrainingData/{image_number}.png")
 
 # Slice the image into 100 even chunks from a 50 x 50 image
-image_slicer.slice(f"TrainingData/{image_number}.png", 100)
+image_slicer.slice(f"TrainingData/{image_number}.png", (width * height) / (50 * 50))
 
 
 
