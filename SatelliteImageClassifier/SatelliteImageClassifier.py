@@ -11,9 +11,9 @@ import time
 img_width = 50
 img_height = 50
 
-training_samples = 4000
+training_samples = 5389
 validation_samples = 800
-epochs = 75
+epochs = 20
 batch_size = 16
 
 if K.image_data_format() == 'channels_first':
@@ -21,9 +21,9 @@ if K.image_data_format() == 'channels_first':
 else:
     input_shape = (img_width, img_height, 3)
 
-dense_layers = [0, 1]
-layer_sizes = [64, 128]
-conv_layers = [2, 3]
+dense_layers = [0, 1, 2]
+layer_sizes = [32, 64, 128]
+conv_layers = [1, 2, 3]
 
 for dense_layer in dense_layers:
     for layer_size in layer_sizes:
@@ -51,32 +51,39 @@ for dense_layer in dense_layers:
             classifier.add(Dense(output_dim=8, activation='softmax'))
 
             # Compiling the CNN
-            classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+            classifier.compile(optimizer='adadelta', loss='categorical_crossentropy', metrics=['accuracy'])
 
             # Part 5 - Fitting the CNN to the images
             from keras.preprocessing.image import ImageDataGenerator
 
             # prepare data augmentation configuration
-            train_datagen = ImageDataGenerator(
+            data_generator = ImageDataGenerator(
                 rescale=1. / 255,
+                validation_split=0.3,
                 horizontal_flip=True,
                 vertical_flip=True,
             )
 
-            test_datagen = ImageDataGenerator(rescale=1/.255)
-
-            training_set = train_datagen.flow_from_directory(
+            training_set = data_generator.flow_from_directory(
                 'dataset/training_set',
                 target_size=(img_width, img_height),
                 batch_size=batch_size,
+                color_mode="rgb",
                 class_mode='categorical',
+                shuffle=True,
+                seed=13,
+                subset="training"
             )
 
-            test_set = test_datagen.flow_from_directory(
-                'dataset/test_set',
+            test_set = data_generator.flow_from_directory(
+                'dataset/training_set',
                 target_size=(img_width, img_height),
                 batch_size=batch_size,
-                class_mode='categorical'
+                color_mode="rgb",
+                class_mode='categorical',
+                shuffle=True,
+                seed=13,
+                subset="validation"
             )
 
             # Part 6 - Training the network

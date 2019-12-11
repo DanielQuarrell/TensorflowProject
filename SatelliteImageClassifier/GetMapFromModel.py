@@ -31,19 +31,25 @@ image_number = int(time.time())
 
 image_url = f"https://www.mapquestapi.com/staticmap/v4/getmap?key={app_key}&scalebar=false&size={width},{height+50}&zoom={zoom}&center={longitude},{latitude}&type=sat&imagetype={image_type}"
 
+print("Requesting image")
 response = requests.get(image_url, stream=True)
+print("1")
 # Open the url image, set stream to True, this will return the stream content.
 resp = requests.get(image_url, stream=True)
+print("2")
 # Open a local file with wb ( write binary ) permission.
 local_file = open(f"TestSatelliteImage/Original/{image_number}.png", 'wb')
+print("3")
 # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
 resp.raw.decode_content = True
+print("4")
 # Copy the response stream raw data to local image file.
 shutil.copyfileobj(resp.raw, local_file)
-
+print("5")
 # Remove the image url response object.
 del resp
 
+print("Cropping image")
 # Crop the image to remove the watermark provided by the API
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 img = Image.open(f"TestSatelliteImage/Original/{image_number}.png")
@@ -51,16 +57,18 @@ area = (0, 0, width, height)
 cropped_img = img.crop(area)
 cropped_img.save(f"TestSatelliteImage/Original/{image_number}.png")
 
+print("Splitting image")
 # Slice the image into 100 even chunks from a 50 x 50 image
 tiled_image = image_slicer.slice(f"TestSatelliteImage/Original/{image_number}.png", (width * height) / (tile_width * tile_height), save=False)
 image_slicer.save_tiles(tiled_image, directory="TestSatelliteImage/Sliced")
 
-classifier = tensorflow.keras.models.load_model("64x3-CNN-Satellite.model")
+classifier = tensorflow.keras.models.load_model("2-conv-64-nodes-1-dense-CNN-Satellite1576082640.model")
 
 image_dir = "TestSatelliteImage/Sliced/"
 
 map_data = []
 
+print("Analysing segments")
 # Loop through each image
 for image_path in os.listdir(image_dir):
 
