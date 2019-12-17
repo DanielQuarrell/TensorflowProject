@@ -17,8 +17,8 @@ app_key = "JNW2RQKQlGBuYLpfDzfLillpPBaVbkYR"
 width = 1500
 height = 1500
 zoom = 17
-longitude = 51.879207
-latitude = -1.315504
+longitude = 52.627128
+latitude = -2.099064
 image_type = "png"
 
 tile_width = 50
@@ -62,7 +62,7 @@ print("Splitting image")
 tiled_image = image_slicer.slice(f"TestSatelliteImage/Original/{image_number}.png", (width * height) / (tile_width * tile_height), save=False)
 image_slicer.save_tiles(tiled_image, directory="TestSatelliteImage/Sliced")
 
-classifier = tensorflow.keras.models.load_model("2-conv-64-nodes-1-dense-CNN-Satellite1576082640.model")
+classifier = tensorflow.keras.models.load_model("2-conv-128-nodes-1-dense-8-batch-CNN-Satellite4.model")
 
 image_dir = "TestSatelliteImage/Sliced/"
 
