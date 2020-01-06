@@ -20,9 +20,9 @@ if K.image_data_format() == 'channels_first':
 else:
     input_shape = (img_width, img_height, 3)
 
-dense_layers = [1]
-layer_sizes = [128, 258]
-conv_layers = [2]
+dense_layers = [0, 1, 2]
+layer_sizes = [64, 128, 258]
+conv_layers = [2, 3]
 batch_sizes = [8]
 kernal_sizes = [6, 7, 8]
 

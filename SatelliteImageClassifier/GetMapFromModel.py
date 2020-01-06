@@ -62,7 +62,19 @@ print("Splitting image")
 tiled_image = image_slicer.slice(f"TestSatelliteImage/Original/{image_number}.png", (width * height) / (tile_width * tile_height), save=False)
 image_slicer.save_tiles(tiled_image, directory="TestSatelliteImage/Sliced")
 
-classifier = tensorflow.keras.models.load_model("2-conv-128-nodes-1-dense-8-batch-CNN-Satellite4.model")
+# 2-conv-128-nodes-1-dense-8-batch-CNN-Satellite4.model
+
+# Best yet 2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577981776.model
+# Lot of grass 2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577979525.model
+# Also lot of grass 2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577977211
+# 2-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577980391
+# 2-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577979904
+# 2-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577984346
+# 2-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577977608
+
+# Not as good 2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577982289
+# Bad but has water 3-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577975986
+classifier = tensorflow.keras.models.load_model("2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577968149.model")
 
 image_dir = "TestSatelliteImage/Sliced/"
 
