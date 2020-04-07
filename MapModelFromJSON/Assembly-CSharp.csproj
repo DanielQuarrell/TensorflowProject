@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\JsonLoader.cs" />
+    <Compile Include="Assets\Scripts\TileMapScript.cs" />
+    <Compile Include="Assets\Scripts\TileScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Documents/Development/UniProjects/AT/TensorflowProject/MapModelFromJSON/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -21,6 +21,12 @@ public class JsonLoader : MonoBehaviour
     int width;
     int height;
     JSONArray tiles;
+    TileMapScript tileMap;
+
+    private void Awake()
+    {
+        tileMap = GetComponent<TileMapScript>();
+    }
 
     void Start()
     {
@@ -48,31 +54,41 @@ public class JsonLoader : MonoBehaviour
                 switch (tiles[w + h * width].Value)
                 {
                     case "city_building":
-                        Instantiate(city_building, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject cityTile = Instantiate(city_building, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(cityTile, TileMapScript.TileTypes.city_building, new Vector2(w, h));
                         break;
                     case "dense_trees":
-                        Instantiate(dense_trees, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject d_treeTile = Instantiate(dense_trees, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(d_treeTile, TileMapScript.TileTypes.dense_trees, new Vector2(w, h));
                         break;
                     case "grass":
-                        Instantiate(grass, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject grassTile = Instantiate(grass, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(grassTile, TileMapScript.TileTypes.grass, new Vector2(w, h));
                         break;
                     case "road":
-                        Instantiate(road, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject roadTile = Instantiate(road, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(roadTile, TileMapScript.TileTypes.road, new Vector2(w, h));
                         break;
                     case "sand":
-                        Instantiate(sand, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject sandTile = Instantiate(sand, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(sandTile, TileMapScript.TileTypes.sand, new Vector2(w, h));
                         break;
                     case "sparse_trees":
-                        Instantiate(sparse_trees, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject s_treeTile = Instantiate(sparse_trees, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(s_treeTile, TileMapScript.TileTypes.sparse_trees, new Vector2(w, h));
                         break;
                     case "village_building":
-                        Instantiate(village_building, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject villageTile = Instantiate(village_building, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(villageTile, TileMapScript.TileTypes.village_building, new Vector2(w, h));
                         break;
                     case "water":
-                        Instantiate(water, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        GameObject waterTile = Instantiate(water, new Vector3(w * distanceMultiplier, 0, h * distanceMultiplier), Quaternion.identity);
+                        tileMap.AddTile(waterTile, TileMapScript.TileTypes.water, new Vector2(w, h));
                         break;
                 }
             }
         }
+
+        tileMap.RefreshAllTiles();
     }
 }

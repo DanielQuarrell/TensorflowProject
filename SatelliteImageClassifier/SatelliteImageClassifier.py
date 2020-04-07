@@ -20,11 +20,11 @@ if K.image_data_format() == 'channels_first':
 else:
     input_shape = (img_width, img_height, 3)
 
-dense_layers = [0, 1, 2]
-layer_sizes = [64, 128, 258]
-conv_layers = [2, 3]
-batch_sizes = [8]
-kernal_sizes = [6, 7, 8]
+dense_layers = [2, 3, 4]
+layer_sizes = [64, 128, 252]
+conv_layers = [1, 2, 3]
+batch_sizes = [8, 16]
+kernal_sizes = [5, 6, 7]
 
 for kernal_size in kernal_sizes:
     for epochs in epoch_size:
@@ -32,41 +32,51 @@ for kernal_size in kernal_sizes:
             for dense_layer in dense_layers:
                 for layer_size in layer_sizes:
                     for conv_layer in conv_layers:
-                        model_name = "{}-conv-{}-nodes-{}-dense-{}-batch-CNN-Satellite{}".format(conv_layer, layer_size,
-                                                                                                  dense_layer, batch_size,
+                        model_name = "{}-conv-{}-nodes-{}-dense-{}-batch-{}-kernal-CNN-Satellite{}".format(conv_layer, layer_size,
+                                                                                                  dense_layer, batch_size, kernal_size,
                                                                                                  int(time.time()))
                         tensorboard = TensorBoard(log_dir='logs/{}'.format(model_name))
                         print(model_name)
 
-                        # Part 1 - Initialize the CNN
+                        # Initialize the CNN
                         classifier = Sequential()
 
-                        # Step 1 - Convolution
-                        classifier.add(Convolution2D(layer_size, kernal_size, kernal_size, input_shape=input_shape, activation='relu'))
+                        # Convolution layer
+                        classifier.add(Convolution2D(layer_size, kernal_size, strides={2, 2}, input_shape=input_shape, activation='relu', padding='same'))
+                        # Pooling layer
                         classifier.add(MaxPooling2D(pool_size=(2, 2)))
 
                         for l in range(conv_layer - 1):
-                            classifier.add(Convolution2D(layer_size, 3, 3, activation='relu'))
+                            # Convolution layer
+                            classifier.add(Convolution2D(layer_size, 3, strides={2, 2}, activation='relu', padding='same'))
+                            # Pooling layer
                             classifier.add(MaxPooling2D(pool_size=(2, 2)))
 
+                        # Flattening
                         classifier.add(Flatten())
+
+                        # Full connection
+                        # Add the dense layers
                         for l in range(dense_layer - 1):
                             classifier.add(Dense(output_dim=layer_size, activation='relu'))
 
+                        # Output layer
                         classifier.add(Dense(output_dim=8, activation='softmax'))
 
-                        # Compiling the CNN
+                        # Compile the CNN
                         classifier.compile(optimizer='adadelta', loss='categorical_crossentropy', metrics=['accuracy'])
 
-                        # Part 5 - Fitting the CNN to the images
+                        # Fitting the CNN to the images
                         from keras.preprocessing.image import ImageDataGenerator
 
-                        # prepare data augmentation configuration
+                        # Prepare data augmentation configuration
                         data_generator = ImageDataGenerator(
                             rescale=1. / 255,
                             validation_split=0.2,
+                            horizontal_flip='true',
                         )
 
+                        # Get training data
                         training_set = data_generator.flow_from_directory(
                             'dataset/training_set',
                             target_size=(img_width, img_height),
@@ -76,6 +86,7 @@ for kernal_size in kernal_sizes:
                             subset="training"
                         )
 
+                        # Get the test data
                         test_set = data_generator.flow_from_directory(
                             'dataset/training_set',
                             target_size=(img_width, img_height),
@@ -85,7 +96,7 @@ for kernal_size in kernal_sizes:
                             subset="validation"
                         )
 
-                        # Part 6 - Training the network
+                        # Train the network
                         from IPython.display import display
                         from PIL import Image
 
@@ -98,5 +109,5 @@ for kernal_size in kernal_sizes:
                             callbacks=[tensorboard]
                         )
 
-                        # Part 7 - Save the model
+                        # Save out the model
                         classifier.save(model_name + ".model")

@@ -104,3 +104,95 @@ venv.bak/
 .mypy_cache/
 *.png
 *.model
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-6-kernal-CNN-Satellite1586108370/events.out.tfevents.1586108376.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-6-kernal-CNN-Satellite1586110294/events.out.tfevents.1586110299.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-6-kernal-CNN-Satellite1586180643/events.out.tfevents.1586180648.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-7-kernal-CNN-Satellite1586108699/events.out.tfevents.1586108703.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-7-kernal-CNN-Satellite1586181640/events.out.tfevents.1586181646.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-8-kernal-CNN-Satellite1586109085/events.out.tfevents.1586109091.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-1-dense-8-batch-8-kernal-CNN-Satellite1586182708/events.out.tfevents.1586182714.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-2-dense-8-batch-6-kernal-CNN-Satellite1586108526/events.out.tfevents.1586108529.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-2-dense-8-batch-6-kernal-CNN-Satellite1586180838/events.out.tfevents.1586180841.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-2-dense-8-batch-7-kernal-CNN-Satellite1586108876/events.out.tfevents.1586108881.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-2-dense-8-batch-7-kernal-CNN-Satellite1586181849/events.out.tfevents.1586181854.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-2-dense-8-batch-8-kernal-CNN-Satellite1586109268/events.out.tfevents.1586109274.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-2-dense-8-batch-8-kernal-CNN-Satellite1586182926/events.out.tfevents.1586182934.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-3-dense-8-batch-6-kernal-CNN-Satellite1586181103/events.out.tfevents.1586181106.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-3-dense-8-batch-7-kernal-CNN-Satellite1586182126/events.out.tfevents.1586182133.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-3-dense-8-batch-8-kernal-CNN-Satellite1586183197/events.out.tfevents.1586183205.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-4-dense-8-batch-6-kernal-CNN-Satellite1586181365/events.out.tfevents.1586181369.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-4-dense-8-batch-7-kernal-CNN-Satellite1586182415/events.out.tfevents.1586182424.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-128-nodes-4-dense-8-batch-8-kernal-CNN-Satellite1586183475/events.out.tfevents.1586183484.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-2-dense-8-batch-5-kernal-CNN-Satellite1586185621/events.out.tfevents.1586185626.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-2-dense-8-batch-5-kernal-CNN-Satellite1586187956/events.out.tfevents.1586187962.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-2-dense-8-batch-6-kernal-CNN-Satellite1586186178/events.out.tfevents.1586186183.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-2-dense-8-batch-7-kernal-CNN-Satellite1586186777/events.out.tfevents.1586186784.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-3-dense-8-batch-5-kernal-CNN-Satellite1586185786/events.out.tfevents.1586185789.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-3-dense-8-batch-6-kernal-CNN-Satellite1586186384/events.out.tfevents.1586186391.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-3-dense-8-batch-7-kernal-CNN-Satellite1586186976/events.out.tfevents.1586186983.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-4-dense-8-batch-5-kernal-CNN-Satellite1586185967/events.out.tfevents.1586185971.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-4-dense-8-batch-6-kernal-CNN-Satellite1586186576/events.out.tfevents.1586186584.DANQ-LAPTOP
+SatelliteImageClassifier/logs/AprilLogs/2-conv-64-nodes-4-dense-8-batch-7-kernal-CNN-Satellite1586187174/events.out.tfevents.1586187183.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577968502/events.out.tfevents.1577968505.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577973979/events.out.tfevents.1577973991.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577979904/events.out.tfevents.1577979924.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577970220/events.out.tfevents.1577970227.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577975768/events.out.tfevents.1577975782.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577981776/events.out.tfevents.1577981798.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577971884/events.out.tfevents.1577971892.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577977608/events.out.tfevents.1577977626.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577983737/events.out.tfevents.1577983762.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577968909/events.out.tfevents.1577968913.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577974434/events.out.tfevents.1577974448.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577980391/events.out.tfevents.1577980410.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577970659/events.out.tfevents.1577970666.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577976227/events.out.tfevents.1577976242.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577982289/events.out.tfevents.1577982312.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577972383/events.out.tfevents.1577972395.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577978177/events.out.tfevents.1577978197.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577984346/events.out.tfevents.1577984375.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577968149/events.out.tfevents.1577968157.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577973649/events.out.tfevents.1577973662.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577979525/events.out.tfevents.1577979546.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-1-dense-8-batch-CNN-Satellite1577969887/events.out.tfevents.1577969894.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-1-dense-8-batch-CNN-Satellite1577975416/events.out.tfevents.1577975432.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-1-dense-8-batch-CNN-Satellite1577981384/events.out.tfevents.1577981410.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577971553/events.out.tfevents.1577971562.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577977211/events.out.tfevents.1577977231.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577983300/events.out.tfevents.1577983327.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577968693/events.out.tfevents.1577968697.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577974199/events.out.tfevents.1577974212.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577980136/events.out.tfevents.1577980155.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577970450/events.out.tfevents.1577970457.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577975986/events.out.tfevents.1577976001.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577982023/events.out.tfevents.1577982047.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577972152/events.out.tfevents.1577972161.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577977911/events.out.tfevents.1577977929.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577984049/events.out.tfevents.1577984078.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577969347/events.out.tfevents.1577969354.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577974885/events.out.tfevents.1577974903.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577980846/events.out.tfevents.1577980872.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577971067/events.out.tfevents.1577971076.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577976676/events.out.tfevents.1577976695.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577982752/events.out.tfevents.1577982780.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577973098/events.out.tfevents.1577973110.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577978943/events.out.tfevents.1577978965.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577985073/events.out.tfevents.1577985102.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577968367/events.out.tfevents.1577968370.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577973809/events.out.tfevents.1577973820.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577979710/events.out.tfevents.1577979730.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-1-dense-8-batch-CNN-Satellite1577970053/events.out.tfevents.1577970059.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-1-dense-8-batch-CNN-Satellite1577975587/events.out.tfevents.1577975603.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-1-dense-8-batch-CNN-Satellite1577981580/events.out.tfevents.1577981602.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577971719/events.out.tfevents.1577971727.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577977415/events.out.tfevents.1577977432.DANQ-LAPTOP
+SatelliteImageClassifier/logs/JanuaryLogs/3-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577983522/events.out.tfevents.1577983547.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1576178992/events.out.tfevents.1576178997.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1576179179/events.out.tfevents.1576179181.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1576179368/events.out.tfevents.1576179371.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1576184966/events.out.tfevents.1576184971.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1576185573/events.out.tfevents.1576185577.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1576186252/events.out.tfevents.1576186257.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1576185152/events.out.tfevents.1576185154.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1576185782/events.out.tfevents.1576185785.DANQ-LAPTOP
+SatelliteImageClassifier/logs/Old Logs/2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1576186482/events.out.tfevents.1576186487.DANQ-LAPTOP

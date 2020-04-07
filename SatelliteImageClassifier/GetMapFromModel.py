@@ -17,8 +17,21 @@ app_key = "JNW2RQKQlGBuYLpfDzfLillpPBaVbkYR"
 width = 1500
 height = 1500
 zoom = 17
-longitude = 52.627128
-latitude = -2.099064
+# latitude = 52.194566
+# longitude = -2.229986
+
+# latitude = 52.627128
+# longitude = -2.099064
+
+# latitude = 50.356280
+# longitude = -4.449498
+
+# latitude = 51.379941
+# longitude = 1.337326
+
+latitude = 50.331046
+longitude = -4.517390
+
 image_type = "png"
 
 tile_width = 50
@@ -29,7 +42,7 @@ map_height = height / tile_height
 
 image_number = int(time.time())
 
-image_url = f"https://www.mapquestapi.com/staticmap/v4/getmap?key={app_key}&scalebar=false&size={width},{height+50}&zoom={zoom}&center={longitude},{latitude}&type=sat&imagetype={image_type}"
+image_url = f"https://www.mapquestapi.com/staticmap/v4/getmap?key={app_key}&scalebar=false&size={width},{height+50}&zoom={zoom}&center={latitude},{longitude}&type=sat&imagetype={image_type}"
 
 print("Requesting image")
 response = requests.get(image_url, stream=True)
@@ -37,7 +50,7 @@ print("1")
 # Open the url image, set stream to True, this will return the stream content.
 resp = requests.get(image_url, stream=True)
 print("2")
-# Open a local file with wb ( write binary ) permission.
+# Open a local file with wb (write binary) permission.
 local_file = open(f"TestSatelliteImage/Original/{image_number}.png", 'wb')
 print("3")
 # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
@@ -62,19 +75,11 @@ print("Splitting image")
 tiled_image = image_slicer.slice(f"TestSatelliteImage/Original/{image_number}.png", (width * height) / (tile_width * tile_height), save=False)
 image_slicer.save_tiles(tiled_image, directory="TestSatelliteImage/Sliced")
 
-# 2-conv-128-nodes-1-dense-8-batch-CNN-Satellite4.model
+# Best 2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577977211 <-----
+# 2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577979525.model
+# 2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577981776.model
 
-# Best yet 2-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577981776.model
-# Lot of grass 2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577979525.model
-# Also lot of grass 2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577977211
-# 2-conv-258-nodes-0-dense-8-batch-CNN-Satellite1577980391
-# 2-conv-128-nodes-0-dense-8-batch-CNN-Satellite1577979904
-# 2-conv-258-nodes-2-dense-8-batch-CNN-Satellite1577984346
-# 2-conv-128-nodes-2-dense-8-batch-CNN-Satellite1577977608
-
-# Not as good 2-conv-258-nodes-1-dense-8-batch-CNN-Satellite1577982289
-# Bad but has water 3-conv-128-nodes-1-dense-8-batch-CNN-Satellite1577975986
-classifier = tensorflow.keras.models.load_model("2-conv-64-nodes-0-dense-8-batch-CNN-Satellite1577968149.model")
+classifier = tensorflow.keras.models.load_model("2-conv-64-nodes-2-dense-8-batch-CNN-Satellite1577977211.model")
 
 image_dir = "TestSatelliteImage/Sliced/"
 
