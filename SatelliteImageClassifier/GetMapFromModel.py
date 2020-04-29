@@ -17,17 +17,6 @@ app_key = "JNW2RQKQlGBuYLpfDzfLillpPBaVbkYR"
 width = 1500
 height = 1500
 zoom = 17
-# latitude = 52.194566
-# longitude = -2.229986
-
-# latitude = 52.627128
-# longitude = -2.099064
-
-# latitude = 50.356280
-# longitude = -4.449498
-
-# latitude = 51.379941
-# longitude = 1.337326
 
 latitude = 50.331046
 longitude = -4.517390
