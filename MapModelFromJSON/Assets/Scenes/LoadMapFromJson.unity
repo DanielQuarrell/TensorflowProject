@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2c7b1543f20314f9330b59683e7bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapJsonPath: D:\Documents\Development\UniProjects\AT\TensorflowProject\SatelliteImageClassifier\map_data.json
+  MapJson: {fileID: 4900000, guid: 89b30f58d98a8d6418e9a4451ad60830, type: 3}
   distanceMultiplier: 10
   city_building: {fileID: 6711176801765022991, guid: 70929ef1290979a40ac4b32ffc52ef60,
     type: 3}

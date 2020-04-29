@@ -5,7 +5,7 @@ using System.IO;
 using SimpleJSON;
 public class JsonLoader : MonoBehaviour
 {
-    [SerializeField] string MapJsonPath;
+    [SerializeField] TextAsset MapJson;
     [SerializeField] int distanceMultiplier;
 
     [Header("Tile Prefabs")]
@@ -36,7 +36,7 @@ public class JsonLoader : MonoBehaviour
 
     void LoadJsonData()
     {
-        string jsonString = File.ReadAllText(MapJsonPath);
+        string jsonString = MapJson.text;
         JSONNode json = JSON.Parse(jsonString);
 
         width = json["width"].AsInt;
